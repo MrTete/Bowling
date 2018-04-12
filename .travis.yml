@@ -1,4 +1,6 @@
 language: csharp
 solution: QL.Exo1/QaliteLogiciel.sln
+before_install:
+  - sudo apt-get install nunit-console
 after_script:
   - nunit-console QL.Exo1/QL.Exo1.Tests/bin/Debug/QL.Exo1.Tests.dll
