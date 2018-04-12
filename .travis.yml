@@ -1,8 +1,10 @@
 language: csharp
+mono:
+  - latest
 solution: QL.Exo1/QaliteLogiciel.sln
 install:
   - nuget restore QL.Exo1/QaliteLogiciel.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=Debug QL.Exo1/QaliteLogiciel.sln
-  - MSBuild ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./QL.Exo1/QL.Exo1.Tests/bin/Debug/QL.Exo1.Tests.dll
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./QL.Exo1/QL.Exo1.Tests/bin/Debug/QL.Exo1.Tests.dll
