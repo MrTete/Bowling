@@ -4,6 +4,7 @@ mono:
 solution: QL.Exo1/QaliteLogiciel.sln
 install:
   - nuget restore QL.Exo1/QaliteLogiciel.sln
+  - nuget install NUnit
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
   - sudo apt install msbuild
 script:
