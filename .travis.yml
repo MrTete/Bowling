@@ -8,4 +8,4 @@ install:
   - sudo apt install msbuild
 script:
   - msbuild QL.Exo1/QaliteLogiciel.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./QL.Exo1/QL.Exo1.Tests/QL.Exo1.Tests.csproj
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./QL.Exo1/QL.Exo1.Tests/bin/Debug/QL.Exo1.Tests.dll
